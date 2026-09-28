@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d1115" />
+    <title>NMIMS Dhule Voice Call | SVKM NMIMS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="testing-panel" aria-label="Testing panel">
+        <div class="testing-header">Testing Panel</div>
+        <div class="testing-grid">
+          <div class="testing-item">
+            <span>Selected Language</span>
+            <strong id="testing-language">-</strong>
+          </div>
+          <div class="testing-item">
+            <span>Recognition Language</span>
+            <strong id="testing-recognition-language">-</strong>
+          </div>
+          <div class="testing-item">
+            <span>Recognition Status</span>
+            <strong id="testing-recognition-status">Idle</strong>
+          </div>
+          <div class="testing-item">
+            <span>Last Recognized Text</span>
+            <strong id="testing-last-recognized">-</strong>
+          </div>
+          <div class="testing-item">
+            <span>Speech Error</span>
+            <strong id="testing-speech-error">None</strong>
+          </div>
+          <div class="testing-item">
+            <span>Error</span>
+            <strong id="testing-error">None</strong>
+          </div>
+          <div class="testing-item">
+            <span>MIC permission</span>
+            <strong id="testing-mic-permission">UNKNOWN</strong>
+          </div>
+          <div class="testing-item">
+            <span>SpeechRecognition API</span>
+            <strong id="testing-speech-api">UNKNOWN</strong>
+          </div>
+          <div class="testing-item">
+            <span>Recognition start</span>
+            <strong id="testing-recognition-start">NO</strong>
+          </div>
+          <div class="testing-item">
+            <span>Audio capture</span>
+            <strong id="testing-audio-capture">NO</strong>
+          </div>
+          <div class="testing-item">
+            <span>Speech result</span>
+            <strong id="testing-speech-result">NO</strong>
+          </div>
+          <div class="testing-item">
+            <span>Current language</span>
+            <strong id="testing-selected-language">-</strong>
+          </div>
+          <div class="testing-item">
+            <span>Call state</span>
+            <strong id="testing-state">IDLE</strong>
+          </div>
+          <div class="testing-item">
+            <span>Listening</span>
+            <strong id="testing-listening">No</strong>
+          </div>
+          <div class="testing-item">
+            <span>Knowledge source</span>
+            <strong>knowledge_base/*.json</strong>
+          </div>
+          <div class="testing-item">
+            <span>Last detected intent</span>
+            <strong id="testing-intent">-</strong>
+          </div>
+          <div class="testing-item">
+            <span>Transfer required</span>
+            <strong id="testing-transfer">No</strong>
+          </div>
+        </div>
+      </aside>
+
+      <main class="phone-scene" aria-label="Phone call simulator">
+        <div class="device-shell">
+          <div class="phone-frame">
+            <div class="notch"></div>
+
+            <header class="status-bar" aria-label="Status bar">
+              <span id="digital-clock">9:41</span>
+              <div class="status-icons" aria-hidden="true">
+                <span class="signal-bars">
+                  <i></i><i></i><i></i><i></i>
+                </span>
+                <span class="wifi-icon"></span>
+                <span class="battery-wrap"><span class="battery-charge"></span></span>
+              </div>
+            </header>
+
+            <div class="screen">
+              <div class="screen-badge">Verified knowledge</div>
+
+              <div class="avatar-wrap">
+                <div class="assistant-avatar">N</div>
+              </div>
+
+              <div class="caller-name">SVKM NMIMS Global University, Dhule</div>
+              <div class="caller-role">NMIMS Voice Assistant</div>
+              <div id="call-status" class="call-status">NMIMS Dhule Voice Assistant</div>
+              <div id="call-duration" class="call-duration">00:00</div>
+
+              <div id="voice-indicator" class="voice-indicator idle" aria-live="polite">
+                <span class="orb"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+              </div>
+
+              <div id="transcript-box" class="transcript-box">Ready</div>
+
+              <div id="transfer-box" class="transfer-box hidden" aria-live="polite">
+                <span class="transfer-tag">Admission Department</span>
+                <div class="transfer-bar"><span></span></div>
+              </div>
+            </div>
+
+            <div id="call-controls" class="call-controls hidden">
+              <button class="control-btn" type="button" data-action="mute">
+                <span class="glyph">🎤</span>
+                <span class="label">Mute</span>
+              </button>
+              <button class="control-btn" type="button" data-action="speaker">
+                <span class="glyph">🔊</span>
+                <span class="label">Speaker</span>
+              </button>
+              <button class="control-btn" type="button" data-action="keypad">
+                <span class="glyph">⌨️</span>
+                <span class="label">Keypad</span>
+              </button>
+              <button class="control-btn danger" type="button" data-action="end">
+                <span class="glyph">📞</span>
+                <span class="label">End Call</span>
+              </button>
+            </div>
+
+            <div id="call-actions" class="call-actions">
+              <button id="call-button" class="primary-button" type="button">📞 Call NMIMS</button>
+              <div id="ended-actions" class="ended-actions hidden">
+                <button id="call-again-button" class="secondary-button" type="button">Call Again</button>
+                <button id="back-button" class="secondary-button muted" type="button">Back</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div id="keypad-overlay" class="keypad-overlay hidden" aria-hidden="true">
+      <div class="keypad-panel">
+        <div class="keypad-header">
+          <span>Keypad</span>
+          <button id="close-keypad" type="button" aria-label="Close keypad">×</button>
+        </div>
+        <div class="keypad-grid">
+          <button type="button">1</button>
+          <button type="button">2</button>
+          <button type="button">3</button>
+          <button type="button">4</button>
+          <button type="button">5</button>
+          <button type="button">6</button>
+          <button type="button">7</button>
+          <button type="button">8</button>
+          <button type="button">9</button>
+          <button type="button" class="empty"></button>
+          <button type="button">0</button>
+          <button type="button">#</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="overviewFlow.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

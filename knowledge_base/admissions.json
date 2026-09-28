@@ -1,0 +1,21 @@
+{
+  "main_branch": "Admission Department",
+  "level": "Admission",
+  "course": null,
+  "specialization": null,
+  "intake": "Published intake and current vacancy are not to be interpreted as equivalent. Current vacancies must be verified with the Admission Department.",
+  "eligibility": "Official eligibility information is verified through the Admission Department.",
+  "duration": null,
+  "admission_information": "Detailed admissions, fees, eligibility, application status, current vacancies, confirmation, payment, document verification, and counselling are handled by the Admission Department.",
+  "source_title": "Official NMIMS Dhule admission references",
+  "source_url": "https://www.svkmnmimsgu.ac.in/admissions",
+  "source": "https://www.svkmnmimsgu.ac.in/admissions",
+  "source_documents": [
+    "https://www.svkmnmimsgu.ac.in/docs/SNGU%20Admission%20Brochure%202026-27.pdf",
+    "https://www.svkmnmimsgu.ac.in/important-dates-schedule",
+    "https://www.svkmnmimsgu.ac.in/admission-policy"
+  ],
+  "last_updated": "2026-09-26",
+  "category": "admissions",
+  "content": "Detailed admissions, fees, eligibility, application status, current vacancies, confirmation, payment, document verification, and counselling are handled by the Admission Department. Published intake numbers should not be interpreted as current vacancy positions."
+}
